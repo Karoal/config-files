@@ -1,5 +1,7 @@
 set expandtab
 set tabstop=4
+set softtabstop=4   " when backspacing delete 4 spaces
+set shiftwidth=4    " when using >>
 set smartindent     " keeps current indents
 set number          " line numbers
 set cursorline      " highlights current line
