@@ -16,4 +16,6 @@ set hlsearch        " highlight matches
 filetype indent on  " load filetype-specific indent files
 syntax on           " syntax highlighting
 
-colorscheme torte
+" colorscheme torte
+" colorscheme zenburn
+colorscheme impact
