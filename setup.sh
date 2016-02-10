@@ -1,11 +1,18 @@
 #!/bin/sh
 # Install script for my dotfiles. Not everything might be set up correcly!
+VIMCONFIG=".vimrc"
+XRESCONFIG=".Xresources"
 
-if [ -s ~/.vimrc ]
-then
-    echo "Moving ~/.vimrc to ~/.vimrc.bak"
-    mv ~/.vimrc ~/.vimrc.bak
-fi
+function copy {
+        if [ -s ~/$1 ]
+        then
+            echo "Moving ~/$1 to ~/$1.bak"
+            mv ~/$1 ~/$1.bak
+        fi
 
-echo "Copying .vimrc"
-cp .vimrc ~/.vimrc
+        echo "Copying $1"
+        cp $1 ~/$1
+}
+
+copy $VIMCONFIG
+copy $XRESCONFIG
